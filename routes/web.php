@@ -25,21 +25,21 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::middleware(['admin'])->group(function () {
-    Route::resource('services', ServiceController::class);
+Route::get('/available-service', function () {
+    return view('available-service');
+})->name('available-service');
 
-    Route::resource('products', ProductController::class);
+Route::get('/available-product', function () {
+    return view('available-product');
+})->name('available-product');
 
-    Route::resource('members', MemberController::class);
+Route::resource('services', ServiceController::class)->middleware('partner');
 
-    Route::resource('partners', PartnerController::class);
-});
+Route::resource('products', ProductController::class)->middleware('partner');
 
-Route::middleware(['partner'])->group(function () {
-    Route::resource('services', ServiceController::class);
+Route::resource('members', MemberController::class)->middleware('admin');
 
-    Route::resource('products', ProductController::class);
-});
+Route::resource('partners', PartnerController::class)->middleware('admin');
 
 // Route::get('/services', '\App\Http\Controllers\ServiceController@index')->name('services.index');
 // Route::get('/services/create', '\App\Http\Controllers\ServiceController@create')->name('services.create');

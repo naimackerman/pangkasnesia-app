@@ -2,7 +2,7 @@
 
 @section('header')
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        {{ __('Dashboard') }}
+        {{ __('BarberShop') }}
     </h2>
 @endsection
 
@@ -12,12 +12,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     @auth
-                        <div>
-                            <a href="{{ url('/available-service') }}" class="text-sm text-gray-700 underline">Service</a>
-                        </div>
-                        <div>
-                            <a href="{{ url('/available-product') }}" class="text-sm text-gray-700 underline">Product</a>
-                        </div>
+                        COMING SOON!
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
