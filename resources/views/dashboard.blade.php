@@ -12,9 +12,14 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                        <div>
+                            <a href="{{ url('/services') }}" class="text-sm text-gray-700 underline">Service</a>
+                        </div>
+                        <div>
+                            <a href="{{ url('/products') }}" class="text-sm text-gray-700 underline">Product</a>
+                        </div>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in admin</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>

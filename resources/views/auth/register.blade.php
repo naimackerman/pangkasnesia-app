@@ -59,6 +59,13 @@
                                 name="password_confirmation" required />
             </div>
 
+            <!-- Role -->
+            <div class="mt-4">
+                <x-label for="role" :value="__('Role')" />
+
+                <x-input id="role" class="block mt-1 w-full" type="integer" name="role" :value="old('role')" required />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
