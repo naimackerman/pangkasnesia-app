@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="py-12"> 
+    <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
@@ -31,7 +31,7 @@
                     <table class="table table-bordered table-responsive-lg">
                         <tr>
                             <th>No</th>
-                            <th>Owner ID</th>
+                            {{-- <th>Owner ID</th> --}}
                             <th>Name</th>
                             <th>Category</th>
                             <th>Description</th>
@@ -42,7 +42,7 @@
                         @foreach ($products as $product)
                             <tr>
                                 <td>{{ ++$i }}</td>
-                                <td>{{ $product->user_id }}</td>
+                                {{-- <td>{{ $product->user_id }}</td> --}}
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->category }}</td>
                                 <td>{{ $product->description }}</td>
@@ -77,6 +77,6 @@
             </div>
         </div>
     </div>
-    
+
 
 @endsection
