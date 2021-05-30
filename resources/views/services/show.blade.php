@@ -25,6 +25,12 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
+                                <strong>Barber ID:</strong>
+                                {{ $service->user_id }}
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
                                 <strong>Name:</strong>
                                 {{ $service->name }}
                             </div>

@@ -7,23 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    use HasFactory;
+    // use HasFactory;
 
-    protected $table = 'services';
-    public $timestamps = true;
+    // protected $table = 'services';
+    // public $timestamps = true;
 
-    protected $casts = [
-        'price' => 'float'
-    ];
+    // protected $casts = [
+    //     'price' => 'float'
+    // ];
 
-    protected $fillable = [
-        'name',
-        'description',
-        'price'
-    ];
+    // protected $fillable = [
+    //     'name',
+    //     'description',
+    //     'price'
+    // ];
 
-    public function partners()
+    protected $guarded = [];
+
+    public function user()
     {
-        return $this->belongsToMany(Partner::class, 'service_partners');
+        return $this->belongsTo(User::class);
     }
 }

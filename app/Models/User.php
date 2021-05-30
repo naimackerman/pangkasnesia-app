@@ -22,7 +22,6 @@ class User extends Authenticatable
         'address',
         'username',
         'password',
-        'role'
     ];
 
     /**
@@ -31,7 +30,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'role',
         'password',
         'remember_token',
     ];
@@ -44,4 +42,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function services()
+    {
+        return $this->hasMany(Service::class);
+    }
 }

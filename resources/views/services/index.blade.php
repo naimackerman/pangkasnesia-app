@@ -31,6 +31,7 @@
                     <table class="table table-bordered table-responsive-lg">
                         <tr>
                             <th>No</th>
+                            <th>Barber ID</th>
                             <th>Name</th>
                             <th>Description</th>
                             <th>Price</th>
@@ -40,6 +41,7 @@
                         @foreach ($services as $service)
                             <tr>
                                 <td>{{ ++$i }}</td>
+                                <td>{{ $service->user_id }}</td>
                                 <td>{{ $service->name }}</td>
                                 <td>{{ $service->description }}</td>
                                 <td>{{ $service->price }}</td>

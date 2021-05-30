@@ -31,6 +31,7 @@
                     <table class="table table-bordered table-responsive-lg">
                         <tr>
                             <th>No</th>
+                            <th>Owner ID</th>
                             <th>Name</th>
                             <th>Category</th>
                             <th>Description</th>
@@ -41,6 +42,7 @@
                         @foreach ($products as $product)
                             <tr>
                                 <td>{{ ++$i }}</td>
+                                <td>{{ $product->user_id }}</td>
                                 <td>{{ $product->name }}</td>
                                 <td>{{ $product->category }}</td>
                                 <td>{{ $product->description }}</td>
