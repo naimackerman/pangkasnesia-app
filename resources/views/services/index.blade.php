@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="py-12"> 
+    <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
@@ -31,7 +31,7 @@
                     <table class="table table-bordered table-responsive-lg">
                         <tr>
                             <th>No</th>
-                            <th>Barber ID</th>
+                            {{-- <th>Barber ID</th> --}}
                             <th>Name</th>
                             <th>Description</th>
                             <th>Price</th>
@@ -41,7 +41,7 @@
                         @foreach ($services as $service)
                             <tr>
                                 <td>{{ ++$i }}</td>
-                                <td>{{ $service->user_id }}</td>
+                                {{-- <td>{{ $service->user_id }}</td> --}}
                                 <td>{{ $service->name }}</td>
                                 <td>{{ $service->description }}</td>
                                 <td>{{ $service->price }}</td>
@@ -75,6 +75,6 @@
             </div>
         </div>
     </div>
-    
+
 
 @endsection
